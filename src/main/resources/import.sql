@@ -7,8 +7,8 @@ INSERT INTO `pedidos` (`monto_total`, `metodo_pago`, `fecha_solicitud`, `fk_id_u
 INSERT INTO `pedidos` (`monto_total`, `metodo_pago`, `fecha_solicitud`, `fk_id_usuario`) VALUES (600, 'tarjeta', '2022-12-28','1');
 INSERT INTO `pedidos` (`monto_total`, `metodo_pago`, `fecha_solicitud`, `fk_id_usuario`) VALUES (570, 'tarjeta', '2022-12-30','1');
 
-INSERT INTO `pedidos_has_productos` (`cantidad`, `detalles`, `fk_id_pedido`, `fk_id_producto`) VALUES (1, 'Pedido exitoso', '1', '1');
-INSERT INTO `pedidos_has_productos` (`cantidad`, `detalles`, `fk_id_pedido`, `fk_id_producto`) VALUES (1, 'Pedido exitoso 1/2', '2', '2');
-INSERT INTO `pedidos_has_productos` (`cantidad`, `detalles`, `fk_id_pedido`, `fk_id_producto`) VALUES (1, 'Pedido exitoso 2/2', '2', '3');
-INSERT INTO `pedidos_has_productos` (`cantidad`, `detalles`, `fk_id_pedido`, `fk_id_producto`) VALUES (1, 'Pedido exitoso 1/2', '3', '1');
-INSERT INTO `pedidos_has_productos` (`cantidad`, `detalles`, `fk_id_pedido`, `fk_id_producto`) VALUES (1, 'Pedido exitoso 1/2', '3', '3');
+INSERT INTO `pedidos_has_productos` (`cantidad`,`subtotal`, `detalles`, `fk_id_pedido`, `fk_id_producto`) VALUES (1, 270, 'Pedido exitoso', '1', '1');
+INSERT INTO `pedidos_has_productos` (`cantidad`,`subtotal`, `detalles`, `fk_id_pedido`, `fk_id_producto`) VALUES (1, 300,'Pedido exitoso 1/2', '2', '2');
+INSERT INTO `pedidos_has_productos` (`cantidad`,`subtotal`, `detalles`, `fk_id_pedido`, `fk_id_producto`) VALUES (1, 300,'Pedido exitoso 2/2', '2', '3');
+INSERT INTO `pedidos_has_productos` (`cantidad`,`subtotal`, `detalles`, `fk_id_pedido`, `fk_id_producto`) VALUES (1, 270,'Pedido exitoso 1/2', '3', '1');
+INSERT INTO `pedidos_has_productos` (`cantidad`,`subtotal`, `detalles`, `fk_id_pedido`, `fk_id_producto`) VALUES (1, 300,'Pedido exitoso 1/2', '3', '3');

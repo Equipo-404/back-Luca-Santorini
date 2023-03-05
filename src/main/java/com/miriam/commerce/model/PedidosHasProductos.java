@@ -24,6 +24,7 @@ public class PedidosHasProductos {
 	
 	
 	private Double cantidad;
+	private Double subtotal;
 	private String detalles;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
@@ -43,10 +44,12 @@ public class PedidosHasProductos {
 		super();
 	}
 
-	public PedidosHasProductos(Long idHas, Double cantidad, String detalles, Pedidos pedidos, Productos productos) {
+	public PedidosHasProductos(Long idHas, Double cantidad, Double subtotal, String detalles, Pedidos pedidos,
+			Productos productos) {
 		super();
 		this.idHas = idHas;
 		this.cantidad = cantidad;
+		this.subtotal = subtotal;
 		this.detalles = detalles;
 		this.pedidos = pedidos;
 		this.productos = productos;
@@ -66,6 +69,14 @@ public class PedidosHasProductos {
 
 	public void setCantidad(Double cantidad) {
 		this.cantidad = cantidad;
+	}
+
+	public Double getSubtotal() {
+		return subtotal;
+	}
+
+	public void setSubtotal(Double subtotal) {
+		this.subtotal = subtotal;
 	}
 
 	public String getDetalles() {
@@ -92,6 +103,9 @@ public class PedidosHasProductos {
 		this.productos = productos;
 	}
 
+	
+	
+	
 	
 	
 }
