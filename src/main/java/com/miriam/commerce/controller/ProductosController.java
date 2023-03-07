@@ -34,4 +34,9 @@ public class ProductosController {
 		Productos productos = iProductosRepository.findById(1L).orElse(null);
 		return productos;
 	}*/
+	
+	@GetMapping("/my-endpoint")
+    public String myEndpoint() {
+        return "Hello World!";
+    }
 }
