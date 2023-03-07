@@ -20,10 +20,10 @@ public class ProductosController {
 	IProductoService iProductoService;
 	
 	@GetMapping("productos")
-	public ResponseEntity<List<Productos>> getAllProductos(){
-		return ResponseEntity.ok(iProductoService.getAllProductos());
+	public ResponseEntity<List<Productos>> getAllProductos() {
+	    List<Productos> productos = iProductoService.getAllProductos();
+	    return ResponseEntity.ok(productos);
 	}
-	
 	@GetMapping("prod")
 	public String hola(){
 		return "hola";

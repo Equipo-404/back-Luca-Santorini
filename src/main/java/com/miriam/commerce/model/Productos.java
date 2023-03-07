@@ -28,22 +28,30 @@ public class Productos {
 	private String descripcion;
 	private Double precio;
 	private String foto;
+	private String fotop;
 	
 	
 	
 	public Productos() {
 		super();
 	}
-	public Productos(Long idProducto, String nombre, String talla, String color, String descripcion, Double precio,
-			String foto) {
+	public Productos(Long idProducto, String nombre, String color, String descripcion, Double precio,
+			String foto, String fotop) {
 		super();
 		this.idProducto = idProducto;
 		this.nombre = nombre;
-		this.talla = talla;
+		
 		this.color = color;
 		this.descripcion = descripcion;
 		this.precio = precio;
 		this.foto = foto;
+		this.fotop = fotop;
+	}
+	public String getFotop() {
+		return fotop;
+	}
+	public void setFotop(String fotop) {
+		this.fotop = fotop;
 	}
 	public Long getIdProducto() {
 		return idProducto;
@@ -56,12 +64,6 @@ public class Productos {
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-	public String getTalla() {
-		return talla;
-	}
-	public void setTalla(String talla) {
-		this.talla = talla;
 	}
 	public String getColor() {
 		return color;
