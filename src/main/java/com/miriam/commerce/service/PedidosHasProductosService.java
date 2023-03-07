@@ -1,9 +1,11 @@
 package com.miriam.commerce.service;
 
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 
 import com.miriam.commerce.model.Pedidos;
 import com.miriam.commerce.model.PedidosHasProductos;
@@ -32,8 +34,22 @@ public class PedidosHasProductosService implements IPedidosHasProductosService{
 
 	@Override
 	public List<PedidosHasProductos> getHasPedidosByPedidos(Long id) {
+		
 		pedidos = iPedidosRepository.findById(id).orElse(null);
-		return iPedidosHasProductosRepository.findByPedidos(pedidos);
+		
+		List<PedidosHasProductos> listaPedidos = iPedidosHasProductosRepository.findByPedidos(pedidos);
+		if(listaPedidos == null) {
+			return Collections.emptyList();
+		}
+		else {
+			return listaPedidos;
+		}
+	}
+
+	@Override
+	public void deleteHasPedidosByPedidos(Long id) {
+		iPedidosHasProductosRepository.deleteById(id);
+		
 	}
 
 	
